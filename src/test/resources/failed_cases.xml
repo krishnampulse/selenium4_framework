@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sample Test Suite" parallel="tests">
+
+	<test name="Test01">
+		<classes>
+			<class name="com.mPulse.testCases.UnitTest2">
+				<methods>
+					<include name="unit2_test2" /><include name="unit2_test3" /><include name="unit2_test4" /><include name="unit2_test1" />
+				</methods>
+			</class><class name="com.mPulse.testCases.UnitTest">
+				<methods>
+					<include name="unit_test1" /><include name="unit_test4" /><include name="unit_test3" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

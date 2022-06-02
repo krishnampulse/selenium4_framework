@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SanitySuite" parallel="tests" thread-count="1">
+
+    
+<!--    	<test name="DemoTest1">-->
+<!--		<groups>-->
+<!--			<run>-->
+<!--				<include name="appmailMessage" />-->
+<!--			</run>-->
+<!--		</groups>-->
+<!--		<packages>-->
+<!--			<package name="com.mPulse.testCases" />-->
+<!--		</packages>-->
+<!--	</test>-->
+
+	<test name="Test01">
+		<classes>
+			<class name="com.mPulse.testCases.OneTimeTriggerTest">
+				<methods>
+					<include name="Verify_that_sms_message_must_fire_when_user_fire_one_time_trigger_for_sms_channel" />
+<!--					<include name="verify_entry_in_member_activity_when_member_is_subscribed__in_sms_channel_from_hermes_api" />-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

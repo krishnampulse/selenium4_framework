@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AudienceAPI" parallel="tests" thread-count="3">
+
+	<listeners>
+		<listener
+			class-name="com.mPulse.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="AudienceAPI_Test01">
+		<groups>
+			<run>
+				<include name="audiencepostapi" />
+				<include name="resubapi" />
+				<include name="audienceGet" />			
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+	<test name="AudienceAPI_Test02">
+		<groups>
+			<run>
+				<include name="updateapi" />
+				<include name="upsertapi" />
+				<include name="RestMemberAPI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+	<test name="AudienceAPI_Test03">
+		<groups>
+			<run>
+				<include name="subapi" />
+				<include name="unsubapi" />
+				<include name="deleteAPI" />
+				<include name="audience_api_v2" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+</suite> <!-- Suite -->

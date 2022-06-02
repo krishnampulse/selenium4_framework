@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ProdSanitySuite" parallel="tests" thread-count="3">
+
+	<listeners>
+		<listener class-name="com.mPulse.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Prod_Sanity_Test1">
+		<groups>
+			<run>
+				<include name="SegmentProfileDateTriggerTest" />
+				<include name="MultiSegmentProfileDateTriggerTest" />
+				<include name="englishspanishmt" />
+				<include name="csvupload" />
+				<include name="es_segment_count" />
+				<include name="system_event_trigger" />
+				<include name="appmailMessage" />
+				<include name="subscription_preference" />			
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+	<test name="Prod_Sanity_Test2">
+		<groups>
+			<run>
+				<include name="event" />
+				<include name="miscellaneous" />
+				<include name="linktracking" />
+				<include name="MemberActivityTest" />
+				<include name="RestMemberAPI" />
+				<include name="es_segment_campaign" />
+				<include name="profileTriggerSanity" />
+				<include name="message_personalization" />
+				<include name="sanity_email_end_to_end" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+	<test name="Prod_Sanity_Test3">
+		<groups>
+			<run>
+				<include name="audiencepostapi" />
+				<include name="resubapi" />
+				<include name="subapi" />
+				<include name="unsubapi" />
+				<include name="updateapi" />
+				<include name="upsertapi" />
+				<include name="deleteAPI" />
+				<include name="audience_api_v2" />
+				<include name="solution_integration" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+</suite> <!-- Suite -->

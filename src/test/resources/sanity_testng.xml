@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SanitySuite" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.mPulse.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Test1">
+		<groups>
+			<run>
+				<include name="SegmentProfileDateTriggerTest" />
+				<include name="miscellaneous" />
+				<include name="CallBackTest" />
+				<include name="es_segment_count" />
+				<include name="system_event_trigger" />
+				<include name="message_personalization" />
+				<include name="sanity_cp_account_CRUD" />
+				<include name="sanity_member_deletion_from_UI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+	<test name="Test2">
+		<groups>
+			<run>
+				<include name="MultiSegmentProfileDateTriggerTest" />
+				<include name="es_audience_doc" />
+				<include name="IVRAPI" />
+				<include name="csvupload" />
+				<include name="event" />
+				<include name="es_segment_campaign" />
+				<include name="sanity_directMessageAPI" />
+				<include name="sanity_nonCampaignMessageAPI" />
+				<include name="sanity_email_end_to_end" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+	<test name="Test3">
+		<groups>
+			<run>
+				<include name="englishspanishmt" />
+				<include name="MemberActivityTest" />
+				<include name="solution_integration" />
+				<include name="test_sso" />
+				<include name="SSO_Auth_Integration" />
+				<include name="user_service" />
+				<include name="NCMTemplateAPI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+	<test name="Test4">
+		<groups>
+			<run>
+				<include name="linktracking" />
+				<include name="RCS" />
+				<include name="moandar" />
+				<include name="profileTriggerSanity" />
+				<include name="appmailMessage" />
+				<include name="sanity_pushNotification" />
+				<include name="RCSAgent_Code_APIs"/>
+				<include name="subscription_preference" />
+				<include name="sanity_emailDNCL" />
+				<include name="mobileWeb" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+	<test name="APIs">
+		<groups>
+			<run>
+				<include name="audiencepostapi" />
+				<include name="deleteAPI" />
+				<include name="unsubapi" />
+				<include name="updateapi" />
+				<include name="subapi" />
+				<include name="resubapi" />
+				<include name="upsertapi" />
+				<include name="audienceGet" />
+				<include name="RestMemberAPI" />
+				<include name="maasapi" />
+				<include name="audience_api_v2" />
+				<include name="auth_user_api_v2" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+</suite> <!-- Suite -->

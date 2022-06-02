@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SanitySuite" parallel="tests">
+	
+	<test name="APIs">
+		<groups>
+			<run>
+				<include name="audiencepostapi" />
+				<include name="deleteAPI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+		<test name="APIs_2">
+		<groups>
+			<run>
+				<include name="unsubapi" />
+				<include name="updateapi" />
+				<include name="directMessageAPI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+		<test name="APIs_3">
+		<groups>
+			<run>
+				<include name="subapi" />
+				<include name="resubapi" />
+				<include name="nonCampaignMessageAPI" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+		<test name="APIs_4">
+		<groups>
+			<run>
+				<include name="upsertapi" />
+				<include name="audienceGet" />
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+	
+		<test name="APIs_5">
+		<groups>
+			<run>
+				<include name="RestMemberAPI" />
+				<include name="maasapi" />
+				<include name="RCSAgent_Code_APIs"/>
+			</run>
+		</groups>
+		<packages>
+			<package name="com.mPulse.testCases" />
+		</packages>
+	</test>
+
+</suite> <!-- Suite -->
